@@ -1,0 +1,15 @@
+.posts {
+    margin-top:20px;
+}
+
+.page-body{
+    padding-top:30px;
+}
+
+.welcome{
+    background-color:#b73c46;
+    color:#fff;
+    font-weight: 100;
+    font-size: 1.5em;
+    padding:20px 10%;
+}

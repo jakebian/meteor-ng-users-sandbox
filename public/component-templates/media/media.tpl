@@ -1,0 +1,1 @@
+<div ng-if="templateUrl" ng-include="templateUrl" class="post-media">{{templateUrl}}</div>
