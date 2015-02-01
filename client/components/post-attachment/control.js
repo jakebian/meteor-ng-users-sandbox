@@ -1,14 +1,9 @@
-angular.module('post-attachment.control', ['meteor-service'])
+angular.module('post-attachment.control', [])
 
 .controller('postAttachmentCtrl',
-            ['$scope','MeteorService',
-     function($scope , MeteorService){
-        $scope.templateUrl = getTemplateUrl('link');
-        MeteorService.subscribeTo(['directory', 'Media'])
-        .then(function () {
-            $scope.media = MeteorService.getMediaById($scope.media);
-            $scope.templateUrl = getTemplateUrl($scope.media.type);
-        })
+            ['$scope',
+     function($scope){
+        $scope.templateUrl = getTemplateUrl($scope.media.type);
      }
 ])
 

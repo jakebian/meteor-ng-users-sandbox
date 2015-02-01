@@ -5,13 +5,12 @@ var DUMMY_USER = {
 }
 
 angular.module('meteor-service', [
-    'angular-meteor',
-    'meteor-collections'
+    'angular-meteor'
     ])
 
 .factory('MeteorService', 
-            ['RawMeteorCollections',
-    function (RawMeteorCollections) {
+            [
+    function () {
         return {
             subscribeTo: subscribeTo,
             getUserById: getUserById,

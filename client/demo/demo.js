@@ -9,12 +9,21 @@ angular.module('demo',
         'post-creator',
 
         'meteor-service',
-        'meteor-collections'
 
+        'angular-meteor'
     ])
 .controller('demoCtrl', 
-            ['$scope','MeteorService','MeteorCollections',
-    function ($scope , MeteorService , MeteorCollections) {
-        $scope.posts = MeteorCollections.Posts();
-        $scope.users = MeteorCollections.Users();
+            ['$scope','$meteorSubscribe','$meteorCollection',
+    function ($scope , $meteorSubscribe , $meteorCollection) {
+        // $scope.posts = MeteorCollections.Posts();
+        $meteorSubscribe.subscribe('users.all')
+        .then(function () {
+            $scope.users = $meteorCollection(Meteor.users);
+        });
+
+        $meteorSubscribe.subscribe('posts.all')
+        .then(function () {
+            $scope.posts = $meteorCollection(Posts);
+            console.log($scope.posts);
+        })
     }]);

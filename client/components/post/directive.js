@@ -7,7 +7,7 @@ angular.module('post.directive', [])
                 post: '='
             },
             restrict: 'E',
-            templateUrl: 'component-templates/post.tpl',
+            templateUrl: 'component-templates/post/post.tpl',
             controller: 'postCtrl'
         }
     }

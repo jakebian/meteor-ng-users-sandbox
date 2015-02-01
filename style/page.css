@@ -13,3 +13,17 @@
     font-size: 1.5em;
     padding:20px 10%;
 }
+
+.user-viewer-item .user-name {
+    padding-top: 20px;
+}
+
+.user-viewer-item .header{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.user-viewer-item {
+    padding:0 20px;
+}
+

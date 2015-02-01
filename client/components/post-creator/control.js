@@ -1,13 +1,12 @@
-angular.module('post-creator.control', ['meteor-service'])
+angular.module('post-creator.control', [])
 .controller('postCreatorCtrl', 
-            ['$scope','MeteorService', 
-    function ($scope , MeteorService) {
+            ['$scope',
+    function ($scope) {
         $scope.model = {
             author: MeteorService.getCurrentUserId()
         };
         $scope.submitPost = function () {
             $scope.model.timestamp = new Date();
-            MeteorService.newPost($scope.model);
         }
     }
 ]);

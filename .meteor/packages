@@ -5,13 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 urigo:angular
 momentjs:moment
 twbs:bootstrap
 meteorhacks:npm
-jbian:user-graph-seeder
 
 
 npm-container

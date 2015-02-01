@@ -1,13 +1,12 @@
 <body>
     <div class="welcome">
-        <span> Hairbook </span>
+        <span> headbook </span>
     </div>
     <div ng-app="demo" ng-controller="demoCtrl" class="page-body container">
         <div class="col-md-8">
             <div class="new-post">
                 <post-creator></post-creator>
             </div>
-
             <div class="posts">
                 <post ng-repeat="post in posts" post="post"></post>
             </div>
